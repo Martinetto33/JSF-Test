@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html;charset=UTF-8" encoding="UTF-8">
+    <h:head>
+        <title>
+           Bean Page
+        </title>
+        <style>
+            .customPanelGrid {
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            .image {
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <p:panelGrid columns="1" styleClass="customPanelGrid" style="border: 0 none; background-color: transparent;">
+            <p:row>
+                <p:column>
+                    <h1>Welcome to the bean page!</h1>
+                </p:column>
+            </p:row>
+            <p:row>
+                <p:column>
+                    <p:graphicImage value="/resources/banner.png" styleClass="image" />
+                </p:column>
+            </p:row>
+        </p:panelGrid>
+    </h:body>
+</f:view>
+</html>

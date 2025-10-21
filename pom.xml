@@ -54,6 +54,13 @@
             <artifactId>jakarta.enterprise.cdi-api</artifactId>
             <version>5.0.0-M1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.omnifaces/omnifaces -->
+        <!-- Used to embed a svg. -->
+        <dependency>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>omnifaces</artifactId>
+            <version>5.0-M4</version>
+        </dependency>
     </dependencies>
 
     <build>

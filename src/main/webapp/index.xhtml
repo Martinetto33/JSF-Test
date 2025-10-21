@@ -33,7 +33,6 @@
                         <p>This is a sample Primefaces application which anagrams a word</p>
                     </p:column>
                 </p:row>
-
                 <p:row>
                     <p:column  >
                         <p:commandButton action="#{bean.generateAnagram}" update="text,growl"
@@ -41,6 +40,11 @@
                     </p:column>
                     <p:column>
                         <p:commandButton action="page2" value="Go to page 2" />
+                    </p:column>
+                </p:row>
+                <p:row>
+                    <p:column>
+                        <p:commandButton action="#{navigator.moveToBeanPage}" value="Go to bean page" />
                     </p:column>
                 </p:row>
             </p:panelGrid>
