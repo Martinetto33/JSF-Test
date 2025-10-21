@@ -7,7 +7,7 @@
 <f:view contentType="text/html;charset=UTF-8" encoding="UTF-8">
     <h:head>
         <style>
-            .customPanelGrid  {
+            .customPanelGrid {
                 width: 50%;
                 margin: 0 auto;
             }
@@ -15,36 +15,54 @@
     </h:head>
     <h:body>
         <h:form id="helloworld">
-            <p:growl id="growl" showDetail="true" />
-            <p:panelGrid columns="2"  styleClass="customPanelGrid"  style="border:0 none; background-color:transparent;">
+            <p:growl id="growl" showDetail="true"/>
+            <p:panelGrid columns="2" styleClass="customPanelGrid" style="border:0 none; background-color:transparent;">
                 <p:row>
-                    <p:column  >
+                    <p:column>
                         <p style="font-weight: bold;  font-size: 150%;"> Hello World primefaces</p>
                     </p:column>
                 </p:row>
 
-                <h:outputLabel for="@next" value="Word" />
-                <p:inputText id="word" value="#{bean.word}" label="Word" />
-                <h:outputLabel for="@next" value="Anagram" />
-                <h:outputText id="text" value="#{bean.anagram}" />
+                <h:outputLabel for="@next" value="Word"/>
+                <p:inputText id="word" value="#{bean.word}" label="Word"/>
+                <h:outputLabel for="@next" value="Anagram"/>
+                <h:outputText id="text" value="#{bean.anagram}"/>
 
                 <p:row>
-                    <p:column  >
+                    <p:column>
                         <p>This is a sample Primefaces application which anagrams a word</p>
                     </p:column>
                 </p:row>
                 <p:row>
-                    <p:column  >
+                    <p:column>
                         <p:commandButton action="#{bean.generateAnagram}" update="text,growl"
-                                         value="Generate anagram" icon="ui-icon-check" style="width: auto" />
+                                         value="Generate anagram" icon="ui-icon-check" style="width: auto"/>
                     </p:column>
                     <p:column>
-                        <p:commandButton action="page2" value="Go to page 2" />
+                        <p:commandButton action="page2" value="Go to page 2"/>
                     </p:column>
                 </p:row>
                 <p:row>
                     <p:column>
-                        <p:commandButton action="#{navigator.moveToBeanPage}" value="Go to bean page" />
+                        <p:commandButton action="#{navigator.moveToBeanPage}" value="Go to bean page"/>
+                    </p:column>
+                </p:row>
+            </p:panelGrid>
+            <p:panelGrid columns="3" styleClass="customPanelGrid" style="border:0 none; background-color:transparent;">
+                <p:row>
+                    <p:column>
+                        <h:commandLink action="#{conditionalNavigator.showPage}" value="Page1">
+                            <f:param name="pageId" value="1"/>
+                        </h:commandLink>
+                    </p:column>
+                    <p:column>
+                        <h:commandLink action="#{conditionalNavigator.showPage}" value="Page2">
+                            <f:param name="pageId" value="2"/>
+                        </h:commandLink>
+                    </p:column>
+                    <p:column>
+                        <h:commandLink action="#{conditionalNavigator.showPage}" value="Stay here">
+                        </h:commandLink>
                     </p:column>
                 </p:row>
             </p:panelGrid>
