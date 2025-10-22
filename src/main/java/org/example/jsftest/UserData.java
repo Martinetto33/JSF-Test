@@ -34,6 +34,6 @@ public class UserData implements Serializable {
     }
 
     public String getWelcomeMessage() {
-        return "Welcome %s".formatted(name);
+        return "Welcome %s!".formatted(name);
     }
 }
