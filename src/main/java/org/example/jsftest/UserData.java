@@ -32,4 +32,8 @@ public class UserData implements Serializable {
     public String login() {
         return "loginResult";
     }
+
+    public String getWelcomeMessage() {
+        return "Welcome %s".formatted(name);
+    }
 }
