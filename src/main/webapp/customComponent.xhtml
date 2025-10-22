@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:composite="http://xmlns.jcp.org/jsf/composite/components">
+
+<f:view contentType="text/html;charset=UTF-8" encoding="UTF-8">
+    <h:head>
+        JSF tutorial
+    </h:head>
+    <h:body>
+        <h1>Custom Component Example</h1>
+        <h:form>
+            <composite:loginComponent
+                usernameLabel="Enter username: "
+                usernameValue="#{userData.name}"
+                passwordLabel="Enter password: "
+                passwordValue="#{userData.password}"
+                loginButtonLabel="Login"
+                loginButtonAction="#{userData.login}"
+            />
+        </h:form>
+        <h:link outcome="index?faces-redirect=true" value="Home"/>
+    </h:body>
+</f:view>
+</html>
